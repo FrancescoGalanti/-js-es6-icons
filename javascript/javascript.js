@@ -115,6 +115,8 @@
      "purple"
    ];
 
+   console.log(color);
+
 
    // the destination of printing //
    const container = $(".icons");
@@ -171,6 +173,21 @@
  function matchcolor(normalArray,arrayColor){
         // get the different type //
         const type = getType(normalArray);
+        console.log(type);
+
+        // duplicate the array and adding color //
+        const pairColor = normalArray.map((element) => {
+              // variable containing the macthing type with color using indexOf //
+              const indexType = type.indexOf(element.type)
+              return{
+                // spreding inside a map //
+                ...element,
+                  // matching the color with the right type  //
+                color: arrayColor[indexType]
+              }
+        });
+        // result //
+        return pairColor;
  }
 
 
@@ -179,10 +196,15 @@
  **/
 
  function getType(array){
-   const type = [];
-
+   // variable type//
+   const types = [];
+   // get the type without duplicate the value //
    array.forEach((element) => {
-
+     if(! types.includes(element.type)){
+        types.push(element.type)
+     };
    });
+   // result //
+   return types;
 
  };

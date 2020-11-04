@@ -106,7 +106,13 @@
        },
    ];
 
+   // referenze //
 
+
+
+   var container = $(".icons");
+
+   container.html(icons);
 
 
 

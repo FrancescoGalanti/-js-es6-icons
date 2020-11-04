@@ -17,5 +17,57 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
+}
+
+
+/* header */
+
+.header-logo{
+  padding: 20px;
+  font-size: 40px;
+  color: dodgerblue;
+}
+
+/* search */
+
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  background: dodgerblue;
+}
+
+.search select{
+  margin-left: 10px;
+  width: 100px;
+  padding-left: 10px;
+}
+
+/* icons */
+.icons{
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background: #ddd;
+}
+
+.icons .icon{
+  flex-basis: calc(100% / 6 - 20px);
+  margin: 20px 10px;
+  text-align: center;
+  background: #fff;
+  font-size: 14px;
+  padding: 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.icons .icon i{
+  font-size: 38px;
+  margin-bottom: 20px;
 }

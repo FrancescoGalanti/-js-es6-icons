@@ -139,12 +139,13 @@
 
    // tag select //
    const select = $("#type");
-   // get the different type with an existing function //
-   const types = getType(icons);
+   // get the different type with an existing function in a new array //
+   const arrayTypes = getType(icons);
+   console.log(types)
 
    // generation option with a function //
 
-   generateOption(types, select)
+   generateOption(arrayTypes, select)
 
 
 
@@ -227,6 +228,9 @@
 /*
 **function that generates as many options as types
 */
- function generateOption(types,option) {
-   
+ function generateOption(arrayTypes,option) {
+   arrayTypes.forEach((element) => {
+        select
+   });
+
  }

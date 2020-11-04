@@ -1,1 +1,1 @@
- js-es6-icons
+js-pwdgen-wannabe

@@ -123,7 +123,7 @@
 
   // print icons in html with a function
 
-  printinhtml(icons,container)
+  // printinhtml(icons,container)
 
 
   // print icons in html with  color in a new array //
@@ -131,6 +131,8 @@
   const iconsColored = matchcolor(icons,color)
   // testing
   console.log(iconsColored)
+   // printing with a existing function //
+   printinhtml(iconsColored,container)
 
 
 
@@ -149,14 +151,15 @@
  function printinhtml(array,destination){
      // Trasforming the object value in variable
      array.forEach((element) => {
-          const {family,prefix, name} = element;
+          const {family,prefix, name,color} = element;
 
 
 
        // creation variable printable //
           const html =
           `<div class="icon">
-             <i class="${family} ${prefix}${name}"></i>
+             <i class="${family} ${prefix}${name}"
+             style="color: ${color}"></i>
              <div class ="title">${name}</div>
           </div>`;
 

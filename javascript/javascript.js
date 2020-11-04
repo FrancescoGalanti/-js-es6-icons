@@ -135,6 +135,18 @@
    printinhtml(iconsColored,container)
 
 
+   // event in the tag select that create the following option: all, animal, vegetable, user, //
+
+   // tag select //
+   const select = $("#type");
+   // get the different type with an existing function //
+   const types = getType(icons);
+
+   // generation option with a function //
+
+   generateOption(types, select)
+
+
 
 
 
@@ -211,3 +223,10 @@
    return types;
 
  };
+
+/*
+**function that generates as many options as types
+*/
+ function generateOption(types,option) {
+   
+ }

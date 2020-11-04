@@ -112,7 +112,36 @@
 
    var container = $(".icons");
 
-   container.html(icons);
+  // print icon in html
+
+  printinhtml(icons,container)
+
+
+  // function of printing in screnn with due paramets
+
+  function printinhtml(array,tag){
+      // Trasforming the object value in variable
+      array.forEach((element) => {
+           const {family,prefix, name} = element;
+
+
+
+        // creation variable printable //
+           const html =
+           `<div class="icon">
+              <i class="${family} ${prefix}${name}"></i>
+              <div class ="title">${name}</div>
+           </div>`;
+
+               // printing in screen //
+              container.append(html);
+
+      });
+
+
+
+
+  };
 
 
 

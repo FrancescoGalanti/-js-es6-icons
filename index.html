@@ -4,24 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS SNACKS v5</title>
+    <!-- Main css -->
     <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- JSNACK 1  -->
 
+     <!-- container min vh 100 -->
     <div class="container">
+      <!-- app header -->
+      <header class="header-logo">
+        <!-- logo -->
+        <div class="logo">Fonticos</div>
+      </header>
+       <!-- Selection Type With event made by javascript -->
+      <div class="search">
+        <label for="type">Filter by tipe</label>
+        <select id="type" name="type">
+          <!-- option: animals,user,vegetable made by javascript with an event -->
+          <option value="all">all</option>
+        </select>
+      </div>
+       <!-- icons event made by jascript -->
       <div class="icons">
-         <i></i>
-         <label for=""></label>
+        <!-- icon added with backstick and interpolation -->
+        <div class="icon">
+          <i class="fas fa-cat"></i>
+          <div class="title">cat</div>
+        </div>
       </div>
     </div>
 
-    <!-- JSNACK 1 // END  -->
 
 
 
-    <!-- JS INCLUDE -->
+
+    <!-- JS -->
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
     <script src="./javascript/javascript.js"></script>

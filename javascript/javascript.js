@@ -141,11 +141,25 @@
    const select = $("#type");
    // get the different type with an existing function in a new array //
    const arrayTypes = getType(icons);
-   console.log(types)
+   console.log(arrayTypes)
 
    // generation option with a function //
 
-   generateOption(arrayTypes, select)
+   generateOption(arrayTypes, select);
+
+
+   // Creation event in select //
+
+   select.change(() => {
+     // Variable in chnaging option values
+     const valueOption = select.val();
+     console.log("option " + valueOption)
+     // filter the array based on your selection in an existing function //
+     const iconsFiltered = filterArray(iconsColored, valueOption)
+     //  Printing the array based on your selection in option value
+     printinhtml(iconsFiltered,container)
+
+   });
 
 
 
@@ -162,6 +176,9 @@
   // function of printing in screnn with due paramets
 
  function printinhtml(array,destination){
+     // reset destination in option value "all" avoiding duplicates //
+     destination.html("");
+
      // Trasforming the object value in variable
      array.forEach((element) => {
           const {family,prefix, name,color} = element;
@@ -230,7 +247,27 @@
 */
  function generateOption(arrayTypes,option) {
    arrayTypes.forEach((element) => {
-        select
+        option.append(`<option value= "${element}">${element}</option>`)
    });
 
+ }
+
+ /*
+ ** function that  filter the array based on your selection
+ */
+
+ function filterArray(array,option){
+
+    // check the defaul option value //
+    if(option === "all"){
+      // return the default array
+      return array;
+    };
+
+   // new array filtered by option value
+   const filtered = array.filter((element) => {
+      return element.type === option;
+   });
+   // result
+   return filtered;
  }
